@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VECNA CORE | La Colmena</title>
+    <meta
+      name="description"
+      content="Inventario técnico, topología y arquitectura de la infraestructura crítica."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-principal">
+      <a href="index.html" class="logotipo">VECNA CORE</a>
+      <ul>
+        <li><a href="index.html">EL NEXO</a></li>
+        <li><a href="servicios.html">DOMINIOS</a></li>
+        <li><a href="infraestructura.html" class="activo">LA COLMENA</a></li>
+        <li><a href="datos.xml">SISTEMA</a></li>
+        <li><a href="formacion.html">ACADEMIA</a></li>
+        <li><a href="contacto.html">CONEXIÓN</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenedor animado">
+      <p class="eyebrow centrado">ARQUITECTURA CRÍTICA</p>
+      <h2 class="titulo-seccion titulo-gigante">ARQUITECTURA DE LA COLMENA</h2>
+      <p class="subtitulo-centrado">
+        Inventario técnico del núcleo de proceso, la red y los puestos de mando
+        que sostienen la operación.
+      </p>
+
+      <div class="cuadricula">
+        <article class="tarjeta enlace-tarjeta">
+          <div class="imagen-tarjeta img-servidores"></div>
+          <div class="contenido-tarjeta">
+            <span class="tag-tarjeta">NÚCLEO</span>
+            <h3>NÚCLEO DE PROCESO</h3>
+            <p>
+              Cluster de virtualización sobre Dell PowerEdge R650 con Proxmox VE
+              para orquestar sistemas Windows Server y Ubuntu Server enfocados a
+              directorio, servicios y datos.
+            </p>
+          </div>
+        </article>
+
+        <article class="tarjeta enlace-tarjeta">
+          <div class="imagen-tarjeta img-red"></div>
+          <div class="contenido-tarjeta">
+            <span class="tag-tarjeta">RED</span>
+            <h3>SISTEMA CIRCULATORIO</h3>
+            <p>
+              Conmutación sobre Cisco Catalyst, VLANs segmentadas y un perímetro
+              controlado para aislar tráfico, administrar accesos y reducir la
+              superficie de exposición.
+            </p>
+          </div>
+        </article>
+
+        <article class="tarjeta enlace-tarjeta">
+          <div class="imagen-tarjeta img-clientes"></div>
+          <div class="contenido-tarjeta">
+            <span class="tag-tarjeta">SOC</span>
+            <h3>PUESTOS DE MANDO</h3>
+            <p>
+              Estaciones de trabajo preparadas para análisis forense, respuesta
+              a incidentes y administración segura de la infraestructura.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <section class="panel-datos panel-secundario">
+        <div class="panel-datos-cabecera">
+          <h2 class="titulo-panel">SECTORES PRINCIPALES</h2>
+          <p class="mensaje-sistema">
+            El sistema distribuye los recursos por dominios funcionales para
+            mantener aislamiento, observabilidad y continuidad.
+          </p>
+        </div>
+
+        <div class="lista-sectores">
+          <article class="sector-item">
+            <h3>S1 · NÚCLEO DE PROCESO</h3>
+            <p>Virtualización, directorio, servicios y custodia de datos.</p>
+          </article>
+          <article class="sector-item">
+            <h3>S2 · SISTEMA CIRCULATORIO</h3>
+            <p>Switching, seguridad perimetral y conectividad inalámbrica.</p>
+          </article>
+          <article class="sector-item">
+            <h3>S3 · PUESTOS DE MANDO</h3>
+            <p>Análisis SOC, investigación y forense digital.</p>
+          </article>
+          <article class="sector-item">
+            <h3>S4 / S5 · BACKUP Y ENERGÍA</h3>
+            <p>Persistencia, recuperación y soporte vital del sistema.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>VECNA CORE © 2026 | Infraestructura Crítica</p>
+      <p>Pedro Hosannah | Sergio Valiente | Hugo López</p>
+    </footer>
+  </body>
+</html>

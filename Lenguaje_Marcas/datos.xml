@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transformacion.xslt"?>
+<infraestructura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validacion.xsd">
+
+    <sector id="S1" nombre="Núcleo de Proceso (Data Center)">
+        <dispositivo id="DEV-001" categoria="Servidor">
+            <modelo>Dell PowerEdge R650</modelo>
+            <especificaciones>
+                <cpu>Intel Xeon Gold</cpu>
+                <ram unidades="GB">256</ram>
+                <almacenamiento tipo="NVMe">4TB RAID 10</almacenamiento>
+            </especificaciones>
+            <sistema_operativo version="7.4">Proxmox VE (Hypervisor)</sistema_operativo>
+            <rol>Cluster de virtualización crítica</rol>
+            <ip_gestion>10.0.30.10</ip_gestion>
+            <estado>OPERATIVO</estado>
+        </dispositivo>
+
+        <dispositivo id="DEV-002" categoria="Servidor">
+            <modelo>VM - Windows Server 2022</modelo>
+            <especificaciones>
+                <cpu>8 vCPU</cpu>
+                <ram unidades="GB">32</ram>
+                <almacenamiento tipo="SSD">500GB</almacenamiento>
+            </especificaciones>
+            <sistema_operativo version="21H2">Windows Server LTSC</sistema_operativo>
+            <rol>Controlador de Dominio (Active Directory)</rol>
+            <ip_gestion>10.0.30.11</ip_gestion>
+            <estado>PROTEGIDO</estado>
+        </dispositivo>
+
+        <dispositivo id="DEV-006" categoria="Servidor">
+            <modelo>VM - Ubuntu Server 22.04</modelo>
+            <especificaciones>
+                <cpu>4 vCPU</cpu>
+                <ram unidades="GB">16</ram>
+                <db_engine>PostgreSQL 15</db_engine>
+            </especificaciones>
+            <sistema_operativo version="5.15 LTS">Linux Kernel Core</sistema_operativo>
+            <rol>Custodia de Fragmentos de Datos (SQL)</rol>
+            <ip_gestion>10.0.30.12</ip_gestion>
+            <estado>OPERATIVO</estado>
+        </dispositivo>
+    </sector>
+
+    <sector id="S2" nombre="Sistema Circulatorio (Networking)">
+        <dispositivo id="DEV-003" categoria="Switch">
+            <modelo>Cisco Catalyst 9300L</modelo>
+            <especificaciones>
+                <puertos>48x1G PoE+</puertos>
+                <uplink>4x10G SFP+</uplink>
+            </especificaciones>
+            <sistema_operativo version="17.9.4">Cisco IOS-XE</sistema_operativo>
+            <rol>Core Switch - Segmentación VLAN 10/20/30</rol>
+            <ip_gestion>10.0.10.1</ip_gestion>
+            <estado>OPERATIVO</estado>
+        </dispositivo>
+
+        <dispositivo id="DEV-004" categoria="Seguridad">
+            <modelo>FortiGate 100F</modelo>
+            <especificaciones>
+                <throughput>20 Gbps</throughput>
+                <vpn_tunnels>500</vpn_tunnels>
+            </especificaciones>
+            <sistema_operativo version="7.2">FortiOS NGFW</sistema_operativo>
+            <rol>Muro Psíquico (Firewall Perimetral e IDS)</rol>
+            <ip_gestion>10.0.10.254</ip_gestion>
+            <estado>ALERTA</estado>
+        </dispositivo>
+
+        <dispositivo id="DEV-007" categoria="Inalámbrico">
+            <modelo>Ubiquiti UniFi 6 Pro</modelo>
+            <especificaciones>
+                <estandar>Wi-Fi 6</estandar>
+                <bandas>2.4GHz / 5GHz</bandas>
+            </especificaciones>
+            <sistema_operativo version="6.5.28">UniFi OS</sistema_operativo>
+            <rol>Puente Inalámbrico Psíquico (WAP)</rol>
+            <ip_gestion>10.0.10.50</ip_gestion>
+            <estado>OPERATIVO</estado>
+        </dispositivo>
+    </sector>
+
+    <sector id="S3" nombre="Puestos de Mando (SOC)">
+        <dispositivo id="DEV-005" categoria="Estación">
+            <modelo>Precision 3660 Tower</modelo>
+            <especificaciones>
+                <cpu>Intel i9-13900</cpu>
+                <ram unidades="GB">64</ram>
+            </especificaciones>
+            <sistema_operativo version="23.10">Ubuntu Desktop / Kali</sistema_operativo>
+            <rol>Estación de Análisis Forense Digital</rol>
+            <ip_gestion>10.0.20.101</ip_gestion>
+            <estado>SINCRONIZADO</estado>
+        </dispositivo>
+    </sector>
+
+    <sector id="S4" nombre="Cámara de Ecos (Backup &amp; Storage)">
+        <dispositivo id="DEV-008" categoria="Almacenamiento">
+            <modelo>Synology SA3400</modelo>
+            <especificaciones>
+                <bahias>12 Hot-swap</bahias>
+                <capacidad tipo="HDD">96TB RAID 6</capacidad>
+            </especificaciones>
+            <sistema_operativo version="7.2">DiskStation Manager (DSM)</sistema_operativo>
+            <rol>Repositorio de Recuerdos (Backup Inmutable)</rol>
+            <ip_gestion>10.0.30.50</ip_gestion>
+            <estado>PROTEGIDO</estado>
+        </dispositivo>
+    </sector>
+
+    <sector id="S5" nombre="Soporte Vital (Energía)">
+        <dispositivo id="DEV-009" categoria="SAI">
+            <modelo>APC Smart-UPS 3000VA</modelo>
+            <especificaciones>
+                <tipo>Online Doble Conversión</tipo>
+                <autonomia>30 min Full Load</autonomia>
+            </especificaciones>
+            <sistema_operativo version="4.5">NMC Management Card</sistema_operativo>
+            <rol>Latido del Sistema (SAI/UPS)</rol>
+            <ip_gestion>10.0.10.100</ip_gestion>
+            <estado>OPERATIVO</estado>
+        </dispositivo>
+    </sector>
+
+</infraestructura>

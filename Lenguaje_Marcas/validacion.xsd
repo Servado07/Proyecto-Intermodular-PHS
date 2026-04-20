@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="tipoIP">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([0-9]{1,3}\.){3}[0-9]{1,3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoEstado">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OPERATIVO"/>
+            <xs:enumeration value="PROTEGIDO"/>
+            <xs:enumeration value="ALERTA"/>
+            <xs:enumeration value="SINCRONIZADO"/>
+            <xs:enumeration value="CAÍDO"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="infraestructura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sector" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dispositivo" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="modelo" type="xs:string"/>
+                                        <xs:element name="especificaciones">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="sistema_operativo">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="version" type="xs:string"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="rol" type="xs:string"/>
+                                        <xs:element name="ip_gestion" type="tipoIP"/>
+                                        <xs:element name="estado" type="tipoEstado"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                    <xs:attribute name="categoria" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
