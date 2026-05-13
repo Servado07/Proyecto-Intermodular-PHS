@@ -1,15 +1,42 @@
-# VECNA CORE - Proyecto Intermodular ASIR 1
+<h1 align="center">VECNA CORE - Proyecto Intermodular ASIR 1</h1>
 
 ![Portada VECNA CORE](./assets/vecnacore-portada.png)
 
+## Información del proyecto
+
+| Dato | Información |
+|---|---|
+| **Nombre del proyecto** | VECNA CORE |
+| **Tipo de proyecto** | Proyecto Intermodular |
+| **Curso** | 1º ASIR |
+| **Centro** | Prometeo by ThePower Caja Mágica |
+| **Web del proyecto** | https://vecnacore.netlify.app/ |
+| **Repositorio** | https://github.com/Servado07/VECNACORE---Intermodular.git |
+| **Integrantes** | Pedro Hosannah, Sergio Valiente y Hugo López |
+
+---
+
 ## Descripción del proyecto
 
-**VECNA CORE** es una empresa ficticia creada para nuestro proyecto intermodular de **1º de ASIR**.  
+**VECNA CORE** es una empresa ficticia creada para nuestro proyecto intermodular de **1º de ASIR**.
+
 La idea principal del proyecto es simular una empresa dedicada a la **ciberseguridad, administración de sistemas, monitorización de infraestructuras IT y gestión de servicios tecnológicos**.
 
 Hemos planteado VECNA CORE como si fuese una empresa real, con una infraestructura interna formada por servidores, clientes, redes segmentadas, servicios internos, base de datos, página web corporativa y documentación técnica.
 
 El objetivo principal ha sido unir los contenidos trabajados en diferentes asignaturas durante el curso y aplicarlos sobre una misma empresa ficticia, consiguiendo que todas las partes tengan relación entre sí.
+
+---
+
+## Web oficial del proyecto
+
+La página web de VECNA CORE está desplegada en Netlify y funciona como presentación principal de nuestra empresa ficticia.
+
+En ella se muestra la identidad visual del proyecto, la explicación de la empresa, los servicios que ofrece, la infraestructura planteada y la relación con las distintas asignaturas del ciclo.
+
+Puedes acceder a la web desde el siguiente enlace:
+
+**https://vecnacore.netlify.app/**
 
 ---
 
